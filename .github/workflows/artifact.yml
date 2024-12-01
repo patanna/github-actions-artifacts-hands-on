@@ -24,6 +24,7 @@ jobs:
     needs: build
     steps:
     - uses: actions/download-artifact@v3
-      with: hello-artifact
+      with: 
+        name: hello-artifact
         path: ./artifacts
     - run: cat ./artifacts/hello.txt
